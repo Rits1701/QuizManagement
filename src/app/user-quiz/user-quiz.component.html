@@ -2,7 +2,7 @@
 	<div id="page-wrap">
 
 		<h1>Final Quiz for Lip building</h1>
-    <form>
+    <form [formGroup]="quizForm" (submit)="submitQuiz()">
 		  <ol>
             <li>
                 <h3>CSS Stands for...</h3>
@@ -134,7 +134,7 @@
             
             </ol>
             
-            <input type="submit" value="Submit Quiz" />
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
 		
 		</form>
 	

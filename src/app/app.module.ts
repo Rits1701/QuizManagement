@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'adminlogin', component: AdminloginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'userquiz', component: UserQuizComponent},
+  { path: 'userquiz/:quizName', component: UserQuizComponent},
   { path: 'selectquiz', component: SelectQuizComponent}
 
 

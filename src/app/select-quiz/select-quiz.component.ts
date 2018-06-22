@@ -13,6 +13,7 @@ export class SelectQuizComponent implements OnInit {
   constructor(private _router:Router, private _quizservices:QuizservicesService) { }
 
   ngOnInit() {
+  console.log("hi")
   }
 
 selectedValue = 1;
@@ -24,10 +25,7 @@ selectQuiz()
 }  
 
 userQuiz(quizName)
- {
- this._quizservices.getQuestion(this.quizName).subscribe(data=>{
-   console.log(data)
-  this._router.navigate(['/userquiz'])
-  })
- } 
+  {
+    this._router.navigate(['/userquiz', quizName]);
+  } 
 }

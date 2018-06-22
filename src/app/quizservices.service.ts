@@ -16,7 +16,9 @@ export class QuizservicesService {
      return this.http.get("http://localhost:8080/quizdetail.jsp?quiztype="+quiztype).map(res=>res.json());
   }
 
-  getQuestions(){ 
-     return this.http.get("http://localhost:8080/quizdetail.jsp).map(res=>res.json());
+   getQuiz(quizName:any){ 
+     return this.http.get("http://localhost:8080/quiz.jsp?quizName="+quizName).map(res=>res.json());
   }
+  
+
 }
