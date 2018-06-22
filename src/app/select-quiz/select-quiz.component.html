@@ -1,3 +1,35 @@
-<p>
-  select-quiz works!
-</p>
+
+<div class="container">
+  <h2>Select Quiz</h2>
+  
+     <div class="form-group ">
+      <label class="control-label " for="select">
+       Select a Choice
+      </label>
+      <select (change)="selectQuiz()" class="select form-control" [(ngModel)]="selectedValue" id="select" name="select"> 
+       <option value="1" selected>
+        MCQ Questions
+       </option>
+       <option value="2">
+        Open Questions
+       </option>
+       <option value="3">
+        Associative Questions
+       </option>
+      </select>  <span>
+
+     </div>
+  <span>  
+    <a class="btn btn-default" 
+    (click)="userQuiz(quizName)" style="margin:10px;">MCQ Choices</a>
+  </span>
+  <span>  
+    <a class="btn btn-default" 
+    (click)="userQuiz(quizName)" style="margin:10px;">One Question</a>
+  </span>
+  <span>  
+    <a class="btn btn-default" 
+    (click)="userQuiz(quizName)" style="margin:10px;">Associative Question</a>
+  </span>
+   
+</div>

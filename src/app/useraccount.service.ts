@@ -10,18 +10,18 @@ import 'rxjs/add/operator/map';
 })
 export class UseraccountService {
 
-urllogin:String= "http:vdv";
+urllogin= "http://localhost:8080/question.jsp";
 
   constructor(private http:Http) { }
 
   loginSubmit(user)
-  {
-     return this.http.post("urllogin", user).map(res=>res.json());
+  { 
+     return this.http.post("http://localhost:8080/authentication.jsp", user).map(res=>res.json());
   }
   
   registerSubmit(user)
   {
-     return this.http.post("urllogin", user).map(res=>res.json());
+     return this.http.post("http://localhost:8080/authentication.jsp", user).map(res=>res.json());
   }
 
 }

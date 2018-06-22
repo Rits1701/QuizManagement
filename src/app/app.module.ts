@@ -10,9 +10,9 @@ import { RegisterComponent } from './register/register.component';
 import { UserQuizComponent } from './user-quiz/user-quiz.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { CreatequestionComponent } from './createquestion/createquestion.component';
+import { SelectQuizComponent } from './select-quiz/select-quiz.component';
 
 import { UseraccountService } from './useraccount.service';
-import { SelectQuizComponent } from './select-quiz/select-quiz.component';
 
 
 const routes: Routes = [
@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'createquestion', component: CreatequestionComponent},
   { path: 'adminlogin', component: AdminloginComponent},
   { path: 'register', component: RegisterComponent},
-  { path: 'userquiz', component: UserQuizComponent}
+  { path: 'userquiz', component: UserQuizComponent},
+  { path: 'selectquiz', component: SelectQuizComponent}
 
 
 ];

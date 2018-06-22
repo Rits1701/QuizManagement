@@ -13,23 +13,24 @@ export class LoginComponent implements OnInit {
 
 loginForm:FormGroup = new FormGroup({
    username:new FormControl('', Validators.required),
-   password:new FormControl('', Validators.required),  
+   password:new FormControl('', Validators.required),
+    
 })
 
  constructor(private _router:Router, private _useraccountService:UseraccountService) { }
 
-
   ngOnInit() {
   }
 
+
+
   login(){
-  this._useraccountService.loginSubmit(JSON.stringify(this.loginForm.value)).subscribe(data=> {console.log(data); this._router.navigate(['/login']);},
-  )
 
-  console.log(JSON.stringify(this.loginForm.value));
-
-  }
-
-
-
+    if(!this.loginForm.valid){
+      console.log('Invalid Form');
+      return;
+      }
+    console.log(JSON.stringify(this.loginForm.value));
+    this._useraccountService.loginSubmit(JSON.stringify(this.loginForm.value)).subscribe(data=> {console.log(data); this._router.navigate(['/selectquiz']);},
+   )}
 }

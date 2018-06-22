@@ -12,4 +12,6 @@ export class UserQuizComponent implements OnInit {
   ngOnInit() {
   }
 
+  
+
 }
